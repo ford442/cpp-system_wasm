@@ -1,7 +1,7 @@
 #include "./main.hpp"
 
 void sys(){
-system("md c:\test_wasm"); 
+system("set MKDIR_DIR=C:\wasm && if not exist %MKDIR_DIR% mkdir %MKDIR_DIR%"); 
 }
 
 extern "C"{
