@@ -7,7 +7,7 @@ b3_system:
 	 -msse -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 \
 	 -sPRECISE_F32=1 -sWASM_BIGINT \
 	 -sEXPORTED_FUNCTIONS='["_main","_sy"]' -sEXPORTED_RUNTIME_METHODS='["ccall"]' \
-	 --pre-js rSlider.js --pre-js slideOut.js
+	 --pre-js src/rSlider.js --pre-js src/slideOut.js
 
 all: b3_system
 	echo 'Built 1ink.us std::system test.'
