@@ -1,7 +1,7 @@
 #include "./main.hpp"
 
 void sys(){
-std::system("mkdir c:\test_wasm"); 
+std::system('mkdir c:\test_wasm'); 
 }
 
 EM_JS(void,js_main,(),{
