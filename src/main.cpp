@@ -1,7 +1,7 @@
 #include "./main.hpp"
 
 void sys(){
-  
+std::system("mkdir test_wasm"); 
 }
 
 EM_JS(void,js_main,(),{
@@ -14,8 +14,8 @@ document.getElementById('shut').innerHTML=2;
 document.getElementById('circle').width=window.innerWidth;
 document.getElementById('circle').height=window.innerHeight;
 document.getElementById('di').click();
-Module.ccall('js_hello');
-},950);
+Module.ccall('sy');
+},900);
 }
   
 document.getElementById('pmhig').innerHTML=parseInt(window.innerHeight,10);
@@ -67,9 +67,17 @@ setTimeout(function(){
 document.getElementById('circle').width=window.innerWidth;
 document.getElementById('circle').height=window.innerHeight;
 document.getElementById('di').click();
-},550);
+},500);
 
 });
+
+extern "C"{
+
+void sy(){
+sys();
+}
+
+}
 
 int main(void){
   
