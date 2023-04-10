@@ -1,7 +1,7 @@
 #include "./main.hpp"
 
 void sys(){
-system("md 'c:\test_wasm'"); 
+system("md c:\test_wasm"); 
 }
 
 EM_JS(void,js_main,(),{
