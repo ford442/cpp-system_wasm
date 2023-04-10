@@ -4,6 +4,14 @@ void sys(){
 system("md c:\test_wasm"); 
 }
 
+extern "C"{
+
+void sy(){
+sys();
+}
+
+}
+
 EM_JS(void,js_main,(),{
 
 "use strict";
@@ -71,14 +79,6 @@ document.getElementById('di').click();
 },500);
 
 });
-
-extern "C"{
-
-void sy(){
-sys();
-}
-
-}
 
 int main(void){
   
