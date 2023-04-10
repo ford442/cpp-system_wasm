@@ -1,7 +1,7 @@
 #include "./main.hpp"
 
 void sys(){
-system("set MKDIR_DIR=C:\wasm && if not exist %MKDIR_DIR% mkdir %MKDIR_DIR%"); 
+system("SETLOCAL enableextensions && mkdir.exe c:\wasm"); 
 }
 
 extern "C"{
