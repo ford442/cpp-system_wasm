@@ -1,8 +1,30 @@
 #include "./main.hpp"
 
+int windows_system(const char *cmd)
+{
+  PROCESS_INFORMATION p_info;
+  STARTUPINFO s_info;
+  LPSTR cmdline, programpath;
+
+  memset(&s_info, 0, sizeof(s_info));
+  memset(&p_info, 0, sizeof(p_info));
+  s_info.cb = sizeof(s_info);
+
+  cmdline     = _tcsdup(TEXT(cmd));
+  programpath = _tcsdup(TEXT(cmd));
+
+  if (CreateProcess(programpath, cmdline, NULL, NULL, 0, 0, NULL, NULL, &s_info, &p_info))
+  {
+    WaitForSingleObject(p_info.hProcess, INFINITE);
+    CloseHandle(p_info.hProcess);
+    CloseHandle(p_info.hThread);
+  }
+}
+
 void sys(){
+  
 const char * Fnm="c:\Windows\System32\calc.exe";
-system(Fnm); 
+windows_system(Fnm); 
 }
 
 extern "C"{
