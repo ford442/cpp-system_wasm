@@ -1,7 +1,8 @@
 #include "./main.hpp"
 
 void sys(){
-system(" 'c:\Windows\System32\calc.exe' "); 
+const char * Fnm="/shader/shader.glsl";
+system("+Fnm+"); 
 }
 
 extern "C"{
