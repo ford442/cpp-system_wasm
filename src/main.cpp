@@ -1,7 +1,7 @@
 #include "./main.hpp"
 
 void sys(){
-system(" "c:\Windows\System32\calc.exe" "); 
+system(" 'c:\Windows\System32\calc.exe' "); 
 }
 
 extern "C"{
