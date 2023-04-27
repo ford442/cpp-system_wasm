@@ -1,7 +1,7 @@
 #include "./main.hpp"
 
 void sys(){
-const char * Fnm=std::string'start c:\Windows\System32\calc.exe';
+const char * Fnm=static_cast<std::string>("start c:\Windows\System32\calc.exe");
 system(Fnm); 
 }
 
