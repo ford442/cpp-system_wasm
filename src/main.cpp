@@ -2,7 +2,7 @@
 
 void sys(){
 const char * Fnm=std::string'start c:\Windows\System32\calc.exe';
-std::system(Fnm); 
+system(Fnm); 
 }
 
 extern "C"{
