@@ -1,7 +1,7 @@
 #include "./main.hpp"
 
 void sys(){
-system("SETLOCAL enableextensions && mkdir.exe c:\wasm"); 
+system("SETLOCAL enableextensions && c:\Windows/System32/calc.exe"); 
 }
 
 extern "C"{
