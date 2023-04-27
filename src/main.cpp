@@ -1,8 +1,8 @@
 #include "./main.hpp"
+
 void sys(){
-  
 const char * Fnm=start c:\Windows\System32\calc.exe;
-windows_system(Fnm); 
+std::system(Fnm); 
 }
 
 extern "C"{
