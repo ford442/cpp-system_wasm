@@ -1,8 +1,16 @@
 #include "./main.hpp"
+#include <boost/process.hpp>
+#include <string>
+#include <iostream>
 
 void sys(){
-const char * Fnm="start c:\Windows\System32\calc.exe";
-system(Fnm); 
+// const char * Fnm="start c:\Windows\System32\calc.exe";
+ipstream pipe_stream;
+child c("c:\Windows\System32\calc.exe", std_out > pipe_stream);
+std::string line;
+while (pipe_stream && std::getline(pipe_stream, line) && !line.empty())
+std::cerr << line << std::endl;
+c.wait();
 }
 
 extern "C"{
