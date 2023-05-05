@@ -1,5 +1,5 @@
 b3_system:
-	 em++ src/main.cpp -c -O0 -sUSE_BOOST_HEADERS=1 -std=gnu++2b -flto=thin -mtail-call -mbulk-memory -mnontrapping-fptoint -msign-ext -msimd128
+	 em++ src/main.cpp -c -O0 -sUSE_BOOST_HEADERS=1 -std=gnu++17 -flto=thin -mtail-call -mbulk-memory -mnontrapping-fptoint -msign-ext -msimd128
 	 emcc main.o -o std001.js -sUSE_BOOST_HEADERS=1 -mllvm -O0 -mtail-call -mbulk-memory -mnontrapping-fptoint -msign-ext -msimd128 -flto=thin \
 	 -fwhole-program -polly -sALLOW_MEMORY_GROWTH=0 -sINITIAL_MEMORY=2048mb \
 	 -Xclang -menable-no-nans -Xclang -menable-no-infs \
